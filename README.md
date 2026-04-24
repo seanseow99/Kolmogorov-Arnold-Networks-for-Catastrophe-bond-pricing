@@ -74,7 +74,7 @@ $$
 The final reconstructed price is
 
 $$
-$$\widehat C(x)$$
+\widehat C(x)
 =
 \left(C_{\text{base}}(x) + \varepsilon\right)
 \exp(\widehat \ell_{\text{KAN}}(x)).
@@ -87,7 +87,7 @@ This stabilizes training because the KAN only needs to learn the deviation betwe
 The KAN is trained on standardized input features and Monte Carlo-generated target prices. A KAN layer has the form
 
 $$
-$$x_{l+1,j$$
+x_{l+1,j
 =
 \sum_i \phi_{l,j,i}(x_{l,i}),
 $$
