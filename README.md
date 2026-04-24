@@ -109,16 +109,4 @@ Candidate symbolic functions include simple financially interpretable functions 
 ```python
 ["x", "x^2", "x^3", "exp", "Phi"]
 
-.
-├── data/                  # Monte Carlo pricing datasets and processed features
-├── notebooks/             # Exploratory experiments and model diagnostics
-├── src/
-│   ├── pricing/           # CAT bond pricing, Vasicek discounting, baseline formula
-│   ├── simulation/        # Compound Poisson Monte Carlo engine
-│   ├── models/            # KAN, FNN, and symbolic surrogate training
-│   ├── symbolic/          # Symbolic extraction and formula evaluation
-│   └── evaluation/        # Metrics, monotonicity checks, sensitivity plots
-├── results/               # Trained models, extracted formulas, figures, tables
-├── README.md
-└── requirements.txt
 
