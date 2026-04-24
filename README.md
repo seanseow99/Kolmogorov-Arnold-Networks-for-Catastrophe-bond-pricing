@@ -30,9 +30,9 @@ The underlying pricing model follows a reduced-form CAT bond framework:
 
 - A trigger occurs when cumulative losses exceed a threshold \(D\):
 
-  \[
+  $$
   \tau = \inf \{t : L_t \ge D\}.
-  \]
+  $$
 
 - Interest rates follow a **Vasicek short-rate model**, giving an affine zero-coupon discount factor.
 
@@ -40,9 +40,9 @@ The underlying pricing model follows a reduced-form CAT bond framework:
 
 The project focuses on pricing maps of the form
 
-\[
+$$
 C = C(r_0, \lambda, D, N, T),
-\]
+$$
 
 where:
 
@@ -67,18 +67,18 @@ First, an analytical approximation \(C_{\text{base}}\) is computed using:
 
 The KAN then learns the residual correction in log-ratio form:
 
-\[
+$$
 \ell(x) = \log \frac{C_{\text{MC}}(x)}{C_{\text{base}}(x) + \varepsilon}.
-\]
+$$
 
 The final reconstructed price is
 
-\[
+$$
 \widehat C(x)
 =
 \left(C_{\text{base}}(x) + \varepsilon\right)
 \exp(\widehat \ell_{\text{KAN}}(x)).
-\]
+$$
 
 This stabilizes training because the KAN only needs to learn the deviation between the analytical baseline and the Monte Carlo price, rather than the entire pricing function.
 
@@ -86,11 +86,11 @@ This stabilizes training because the KAN only needs to learn the deviation betwe
 
 The KAN is trained on standardized input features and Monte Carlo-generated target prices. A KAN layer has the form
 
-\[
+$$
 x_{l+1,j}
 =
 \sum_i \phi_{l,j,i}(x_{l,i}),
-\]
+$$
 
 where each \(\phi_{l,j,i}\) is a learnable univariate spline function. Unlike an MLP, which uses scalar weights and fixed nonlinearities, the KAN learns nonlinear edge functions directly.
 
