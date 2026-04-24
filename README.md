@@ -22,9 +22,9 @@ The underlying pricing model follows a reduced-form CAT bond framework:
 
 - Aggregate catastrophe losses follow a **compound Poisson process**
   
-  \[
+  $$
   L_t = \sum_{i=1}^{M_t} X_i,
-  \]
+  $$
 
   where \(M_t \sim \mathrm{Poisson}(\lambda t)\), and severities \(X_i\) are lognormally distributed.
 
